@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Fonts Pre Connect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+  <!-- CSS Files Links -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Title -->
+  <title>Home</title>
+
+  
+  <style>
+    body{
+        background-color: #E2E6F4;
+    }
+    .student-form {
+        width: 600px;
+        margin: 8vh auto;
+        background-color: #fff;
+        padding: 80px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #f7f7f7;
+    }
+    .student-form h1 {
+        margin: 0 0 20px;
+        text-align: left;
+        Font-size: 36px;
+        line-height: 1;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .student-form h1::before {
+        content: "";
+        width: 80px;
+        height: 3px;
+        background-color: #000;
+    }
+    .student-form label {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .student-form input[type="text"], 
+    .student-form input[type="email"],  
+    .student-form input[type="number"] {
+        width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fafafa;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+       -moz-appearance: textfield;
+    }
+    span.submit-btn {
+        text-align: center;
+    }
+    .new-record-btn, .student-form input[type="submit"], .button-container .button-wrapper span a {
+        padding: 10px 40px;
+        width: 200px;
+        margin: 10px 30%;
+        background-color: #2A3855;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-decoration: none;
+    }
+    .new-record-btn:hover, .student-form input[type="submit"]:hover, .button-container .button-wrapper span a:hover {
+        background-color: #0023D6;
+        color: #fff;
+        
+    }
+    .new-record-btn {
+        text-decoration: none;
+    }
+    .success-msg {
+        text-align: center !important;
+        padding: 20px;
+    }
+    .button-container {
+        display: none;
+    }
+    .button-container .button-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-flow: row;
+    }
+    .button-container .button-wrapper span.buttons {
+        padding: 0 10px 20px 10px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  
+    <div class="student-form">
+        <div class="form-container" id="student-info">
+            <h1>Student Registration</h1>
+            <form action="index.php" method="POST">
+                <label>Student Name: <br><input type="text" name="name" required> </label><br>
+                <label>Email: <br><input type="email" name=" email" required></label><br>
+                <label>Mobile: <br><input type="number" name="mobile" required></label><br>
+                <label>City: <br><input type="text" name="city"></label><br>
+                <label>Status: <br><br>
+                    <label><input type="radio" name="status" value="Active">Active</label><br>
+                    <label><input type="radio" name="status" value="Inactive">Inactive</label>
+                </label>
+                <span class="submit-btn"><input type="submit" name="submit" value="Add Student Data"></span>
+            </form>
+            
+        </div>
+
+        <div class="button-container">
+            <div class="success-msg"><p>Student Data Submitted Successfully</p></div>
+            <div class="button-wrapper">
+                <span class="buttons"><nobr><a href="index.php">Add New Student</a></nobr></span>
+                <span class="buttons"><nobr><a href="#">View Student Data</a></nobr></span>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
