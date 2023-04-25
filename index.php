@@ -36,6 +36,6 @@
     }
 
 
-    include "index.html";
+    include "test.html";
 
 ?>
